@@ -7,8 +7,9 @@
 2.silence_estimate.py:估计一个固定静音阈值，在此基础上进行语音端点检测
   input:wav文件
   output:silence_value,能量计算公式：energy= np.sqrt(每帧向量的内积~np.dot(array,array.T))
-
-3.speech_separation_energy.py：非实时语音端点检测：采用基于能量的双阈值门限方法
-  2中的能量阈值作为低阈值
+	32位采样：430542587
+3.speech_separation_energy.py：非实时语音端点检测：采用基于能量的阈值门限的方法
+  第2步中的能量阈值作为阈值：1.8 * 430542587
   
-4.实时语音端点检测：采用基于能量的双阈值门限方法  
+4.实时语音端点检测：采用基于能量阈值的方法  
+
